@@ -67,6 +67,7 @@
                 <td>{{ $commande->ttc }}</td>
                 <td>{{ $commande->paiement }}</td>
 
+
                 <td>
 
                     <form action="{{ url('commande/'. $commande->id) }}" method="POST">

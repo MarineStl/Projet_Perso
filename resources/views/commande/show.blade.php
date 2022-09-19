@@ -30,70 +30,70 @@
         <tr>
 
             <th>Portable:</th>
-            <td>$ {{ $commande->portable }}</td>
+            <td>{{ $commande->portable }}</td>
 
         </tr>
 
         <tr>
 
         <th>Adresse:</th>
-        <td>$ {{ $commande->adresse }}</td>
+        <td>{{ $commande->adresse }}</td>
 
         </tr>
 
         <tr>
 
         <th>Complément:</th>
-        <td>$ {{ $commande->complement }}</td>
+        <td>{{ $commande->complement }}</td>
 
         </tr>
 
         <tr>
 
         <th>Ville:</th>
-        <td>$ {{ $commande->ville }}</td>
+        <td>{{ $commande->ville }}</td>
 
         </tr>
 
         <tr>
 
         <th>Code:</th>
-        <td>$ {{ $commande->code }}</td>
+        <td>{{ $commande->code }}</td>
 
         </tr>
 
         <tr>
 
         <th>Produit:</th>
-        <td>$ {{ $commande->produit }}</td>
+        <td>{{ $commande->produit }}</td>
 
         </tr>
 
         <tr>
 
         <th>Quantité:</th>
-        <td>$ {{ $commande->quantite }}</td>
+        <td>{{ $commande->quantite }}</td>
 
         </tr>
 
         <tr>
 
         <th>Prix:</th>
-        <td>$ {{ $commande->Prix }}</td>
+        <td>{{ $commande->Prix }}</td>
 
         </tr>
 
         <tr>
 
         <th>TTC:</th>
-        <td>$ {{ $commande->ttc }}</td>
+        <td>{{ $commande->ttc }}</td>
 
         </tr>
 
         <tr>
 
         <th>Paiement:</th>
-        <td>$ {{ $commande->paiement }}</td>
+        <td>{{ $commande->paiement }}</td>
 
         </tr>
 
