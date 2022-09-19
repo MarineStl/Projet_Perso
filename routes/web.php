@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommandeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::controller(CommandeController::class)->group(function () {
+
+    Route::get('/commande/list', 'list');
+    Route::get('/commande/create', 'create');
+    Route::get('/commande/{id}', 'show');
+    Route::get('/commande/{id}/edit', 'edit');
+
+
+    Route::post('/commande', 'store');
+    Route::patch('/commande/{id}', 'update');
+    Route::delete('/commande/{id}', 'destroy');
+
+});
 
 Route::get('/', function () {
     return view('welcome');
