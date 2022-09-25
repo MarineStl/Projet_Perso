@@ -50,15 +50,15 @@
 
         <tr>
 
-        <th>Ville:</th>
-        <td>{{ $commande->ville }}</td>
-
+        <tr>
+    
+        <th>Code postal:</th>
+        <td>{{ $commande->code }}</td>
+    
         </tr>
 
-        <tr>
-
-        <th>Code:</th>
-        <td>{{ $commande->code }}</td>
+        <th>Ville:</th>
+        <td>{{ $commande->ville }}</td>
 
         </tr>
 

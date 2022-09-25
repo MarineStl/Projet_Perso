@@ -50,7 +50,14 @@ class CommandeController extends Controller
             'quantite' => 'required',
             'prix' => 'required',
             'ttc' => 'required',
-            'paiement' => 'required'
+            'paiement' => 'required',
+            'nombis' => 'required',
+            'prenombis' => 'required',
+            'adressebis' => 'required',
+            'complementbis' => 'required',
+            'codebis' => 'required',
+            'villebis' => 'required'
+            
 
         ]);
 
@@ -68,7 +75,13 @@ class CommandeController extends Controller
             'quantite' => $request->get('quantite'),
             'prix' => $request->get('prix'),
             'ttc' => $request->get('ttc'),
-            'paiement' => $request->get('paiement')
+            'paiement' => $request->get('paiement'),
+            'nombis' => $request->get('nombis'),
+            'prenombis' => $request->get('prenombis'),
+            'adressebis' => $request->get('adressebis'),
+            'complementbis' => $request->get('complementbis'),
+            'codebis' => $request->get('codebis'),
+            'villebis' => $request->get('villebis')
 
         ]);
 
@@ -166,7 +179,7 @@ class CommandeController extends Controller
         $commande = Commande::findOrFail($id);
         $commande->delete();
 
-        return redirect('/')->with('success', 'Commande Modifiée avec succès');
+        return redirect('/')->with('success', 'Commande Supprimée avec succès');
 
     }
 

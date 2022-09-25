@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CommandeController;
+use App\Http\Controllers\ProduitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,9 +28,28 @@ Route::controller(CommandeController::class)->group(function () {
 
 });
 
+Route::controller(ProduitController::class)->group(function () {
+
+    Route::get('/produit/list', 'list');
+    Route::get('/produit/create', 'create');
+    Route::get('/produit/{id}', 'show');
+    Route::get('/produit/{id}/edit', 'edit');
+
+
+    Route::post('/produit', 'store');
+    Route::patch('/produit/{id}', 'update');
+    Route::delete('/produit/{id}', 'destroy');
+
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
 
 
 Route::get('/dashboard', function () {

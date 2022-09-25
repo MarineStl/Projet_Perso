@@ -1,7 +1,6 @@
-@extends('layouts.app')
+@extends('dashboard')
 
 @section('content')
-
     <div class="row">
 
         <div class="col-lg-11">
@@ -10,10 +9,10 @@
 
         </div>
 
+        
         <div class="col-lg-1">
-            <a class="btn btn-success" href="{{ url('commande/create') }}">Ajouter</a>
+            <a class="btn btn-outline-success" href="{{ url('commande/create') }}">Ajouter</a>
         </div>
-
     </div>
 
  
@@ -32,20 +31,20 @@
 
         <tr>
 
-            <th>No</th>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Mail</th>
-            <th>Portable</th>
-            <th>Adresse</th>
-            <th>Complément</th>
-            <th>Ville</th>
-            <th>Code</th>
-            <th>Produit</th>
-            <th>Quantité</th>
-            <th>Prix</th>
-            <th>TTC</th>
-            <th>Paiement</th>
+            <th class="px-2 py-2 w-1/4">No</th>
+            <th class="px-2 py-2 w-1/4">Nom</th>
+            <th class="px-2 py-2 w-1/4">Prénom</th>
+            <th class="px-2 py-2 w-1/4">Mail</th>
+            <th class="px-2 py-2 w-1/4">Portable</th>
+            <th class="px-2 py-2 w-1/4">Adresse</th>
+            <th class="px-2 py-2 w-1/4">Complément</th>
+            <th class="px-2 py-2 w-1/4">Ville</th>
+            <th class="px-2 py-2 w-1/4">Code</th>
+            <th class="px-2 py-2 w-1/4">Produit</th>
+            <th class="px-2 py-2 w-1/4">Quantité</th>
+            <th class="px-2 py-2 w-1/4">Prix</th>
+            <th class="px-2 py-2 w-1/4">TTC</th>
+            <th class="px-2 py-2 w-1/4">Paiement</th>
 
         </tr>
 
@@ -73,11 +72,12 @@
                     <form action="{{ url('commande/'. $commande->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
+                        <div class="d-grid gap-2">
+                             <a class="btn btn-outline-warning" href="{{ url('commande/'. $commande->id) }}">Voir</a>
+                             <a class="btn btn-outline-info" href="{{ url('commande/'. $commande->id .'/edit') }}">Modifier</a>
 
-                        <a class="btn btn-info" href="{{ url('commande/'. $commande->id) }}">Voir</a>
-                        <a class="btn btn-primary" href="{{ url('commande/'. $commande->id .'/edit') }}">Modifier</a>
-
-                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                            <button type="submit" class="btn btn-outline-danger">Supprimer</button>
+                        </div>
 
                     </form>
                 </td>
@@ -88,3 +88,4 @@
     </table>
 
 @endsection
+

@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="icon" href="img/alphabet.png">
 
         <title>Natural</title>
@@ -24,78 +25,59 @@
             }
         </style>
 
-<style>
-            
-            .Logo {
-                margin-top: 2%;
-            }
-            
-            .Titre {
-                font-family: 'Julius Sans One', sans-serif;
-                font-size: 150%;
-                color: #353535;
-                text-align: center;
-
-                margin-top: 7%;
-                margin-bottom: 5%;
-            }
-
-            .Categories {
-                text-align: center;
-            }
-
-            .Categorie1 {
-                text-align: center;
-                margin-bottom: 2%;
-                display: flex;
-                justify-content: space-evenly;
-            }
-
-            .Categorie2 {
-                text-align: center;
-                margin-bottom: 2%;
-                display: flex;
-                justify-content: space-evenly;
-            }
-
-        </style>
 
     </head>
-    <body class="antialiased">
+    <body>
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <div class="relative flex justify-center pt-8 sm:justify-center sm:pt-0">
                 <img class="Logo" src="img/natural.png" alt="Logo" height="100" width="200">
                 </div>
-        <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
+        <div class="relative flex items-top justify-center">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500">Dashboard</a>
                     @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">@lang('Log in')</a>
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500">@lang('Log in')</a>
 
                         @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">@lang('Register')</a>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500">@lang('Register')</a>
                         @endif
                     @endauth
                 </div>
             @endif
-         
-            <div class="Categories">
-                    <img class="band"src="img/zero_waste.jpg" alt="" height="500" width="1300">
-                    <h1 class="Titre">│ Nos catégories produits zéro déchet │</h1>
 
-                    
-                        <div class="Categorie1">
+        </div>       
+                
+                
+                
+        <div class="container-fluid text-center">
+            <div class="text-center">
+                <div class="row">
+                        <img class="band"src="img/zero_waste.jpg" alt="" height="300" width="1600">
+                        <h1 class="Titre">│ Nos catégories produits zéro déchet │</h1>
+                        </div>
+                        <div class="row row-cols-2">
+                            <div class="col">
                             <a href=""><img src="img/Savons.png" alt="Image catégorie savons"height="350" width="600"></a>
+                        </div>
+    
+                        <div class="col">
                             <a href=""><img src="img/Lessives.png" alt="Image catégorie lessive"height="350" width="600"></a>
                         </div>
-                        
-                        <div class="Categorie2">
+    
+                        <div class="col">
                             <a href=""><img src="img/ZD.png" alt="Image catégorie zéro déchêt"height="350" width="600"></a>
+                        </div>
+    
+                        <div class="col">
                             <a href=""><img src="img/ESP.png" alt="Image catégorie en savoir plus"height="350" width="600"></a>
-
                         </div>
                 </div>
+            </div>
+        </div>
+            
+
+
     </body>
 </html>

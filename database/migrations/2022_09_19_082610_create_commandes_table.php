@@ -28,6 +28,13 @@ return new class extends Migration
             $table->string('prix');
             $table->string('ttc');
             $table->string('paiement');
+            $table->string('nombis');
+            $table->string('prenombis');
+            $table->string('adressebis');
+            $table->string('complementbis');
+            $table->string('codebis');
+            $table->string('villebis');
+
             $table->timestamps();
         });
     }

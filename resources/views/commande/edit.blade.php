@@ -39,12 +39,12 @@
 
         <div class="form-group mb-3">
             <label for="mail">Mail:</label>
-            <input type="text" class="form-control" id="mail" placeholder="Entrez un mail" name="mail" value="{{ $commande->mail }}">
+            <input type="email" class="form-control" id="mail" placeholder="Entrez un mail" name="mail" value="{{ $commande->mail }}">
         </div>
 
         <div class="form-group mb-3">
             <label for="portable">Portable:</label>
-            <input type="text" class="form-control" id="portable" placeholder="Entrez un portable" name="portable" value="{{ $commande->portable }}">
+            <input type="tel" class="form-control" id="portable" placeholder="Entrez un numéro" name="portable" value="{{ $commande->portable }}">
         </div>
 
         <div class="form-group mb-3">
@@ -58,13 +58,13 @@
         </div>
 
         <div class="form-group mb-3">
-            <label for="ville">Ville:</label>
-            <input type="text" class="form-control" id="ville" placeholder="Entrez une ville" name="ville" value="{{ $commande->ville }}">
-        </div>
-        
-        <div class="form-group mb-3">
             <label for="code">Code:</label>
             <input type="text" class="form-control" id="code" placeholder="Entrez un code postal" name="code" value="{{ $commande->code }}">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="ville">Ville:</label>
+            <input type="text" class="form-control" id="ville" placeholder="Entrez une ville" name="ville" value="{{ $commande->ville }}">
         </div>
 
         <div class="form-group mb-3">
@@ -92,7 +92,7 @@
             <input type="text" class="form-control" id="paiement" placeholder="Entrez un moyen de paiement" name="paiement" value="{{ $commande->paiement }}">
         </div>
 
-        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <button type="submit" class="btn btn-outline-primary">Enregistrer</button>
 
     </form>
 
