@@ -31,9 +31,11 @@ Route::controller(CommandeController::class)->group(function () {
 Route::controller(ProduitController::class)->group(function () {
 
     Route::get('/produit/list', 'list');
+    Route::get('/produit/categories', 'categories');
     Route::get('/produit/create', 'create');
     Route::get('/produit/{id}', 'show');
     Route::get('/produit/{id}/edit', 'edit');
+    
 
 
     Route::post('/produit', 'store');
@@ -49,7 +51,6 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 
 Route::get('/dashboard', function () {

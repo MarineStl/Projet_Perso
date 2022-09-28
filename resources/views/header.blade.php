@@ -11,6 +11,9 @@
          <!-- Script pour les logos-->
          <script src="https://kit.fontawesome.com/14fbcf0019.js" crossorigin="anonymous"></script>
 
+         <!-- Tailwind -->
+        <script src="https://cdn-tailwindcss.vercel.app/"></script>
+
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -27,11 +30,12 @@
 
 
     </head>
+
     <body>
     <div class="max-w-20xl mx-auto sm:px-10 lg:px-10">
-        <div class="relative flex justify-center pt-8 sm:justify-center sm:pt-0">
-            <img class="Logo" src="img/natural.png" alt="Logo" height="100" width="200">
-        </div>
+            <div class="relative flex justify-center pt-8 sm:justify-center sm:pt-0">
+                <img class="Logo" src="img/natural.png" alt="Logo" height="100" width="200">
+                </div>
         <div class="relative flex items-top justify-center">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -47,42 +51,4 @@
                 </div>
             @endif
 
-        </div>       
-                
-                
-                
-        
-            <div class="text-center">
-                <div class="row">
-                    <img class="band"src="img/zero_waste.jpg" alt="" height="600" width="1600">
-                </div>
-                <br>
-                <h1 class="Titre">│ Nos catégories produits zéro déchet │</h1>
-                <br>
-            </div>
-            <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
-                <div class="col-sm-6 col-lg-5 p-2  p-lg-5 d-flex justify-content-center align-items-center">
-                    <a href="{{ url('produit/categories') }}"><img src="img/Savons.png" alt="Image catégorie savons" style="width:100%;height:100%;object-fit:cover;"></a>
-                </div>
-
-                <div class="col-sm-6 col-lg-5 p-2  p-lg-5 d-flex justify-content-center align-items-center">
-                    <a href=""><img src="img/Lessives.png" alt="Image catégorie lessive" style="width:100%;height:100%;object-fit:cover;"></a>
-                </div>
-
-                <div class="col-sm-6 col-lg-5 p-2  p-lg-5 d-flex justify-content-center align-items-center">
-                    <a href=""><img src="img/ZD.png" alt="Image catégorie zéro déchêt" style="width:100%;height:100%;object-fit:cover;"></a>
-                </div>
-
-                <div class="col-sm-6 col-lg-5 p-2  p-lg-5 d-flex justify-content-center align-items-center">
-                    <a href=""><img src="img/ESP.png" alt="Image catégorie en savoir plus" style="width:100%;height:100%;object-fit:cover;"></a>
-                </div>
-            </div>
-        </div>
-
-        <br>
-            
-        </div>
-            {{View::make('footer')}}
-        
-    </body>
-</html>
+        </div>  

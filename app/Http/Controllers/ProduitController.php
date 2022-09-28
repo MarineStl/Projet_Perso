@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ProduitController extends Controller
 {
+    
 
     /**
      * Affiche la liste des produits
@@ -19,6 +20,13 @@ class ProduitController extends Controller
 
     }
 
+    public function categories()
+    {
+
+        $produits = Produit::all();
+        return view('produit.categories', compact('produits'));
+
+    }
 
     /**
      * return le formulaire de creation d'un produit
@@ -72,6 +80,7 @@ class ProduitController extends Controller
         return view('produit.show', compact('produit'));
 
     }
+
 
 
     /**
