@@ -10,6 +10,6 @@ class Commande extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'mail', 'portable', 'nom', 'prenom', 'adresse', 'complement', 'code', 'ville', 'produit', 'quantite', 'prix', 'ttc', 'paiement'
+        'id', 'mail', 'portable', 'nom', 'prenom', 'adresse', 'complement', 'code', 'ville', 'produit', 'quantite', 'prix', 'ttc', 'paiement', 'nombis', 'prenombis', 'adressebis', 'complementbis', 'codebis', 'villebis'
     ];
 }

@@ -26,9 +26,6 @@
         @csrf
 
 
-<form action="{{ url('produit') }}" method="POST">
-        @csrf
-
         <div class="form-group mb-3">
             <label for="nom">Nom :</label>
             <input type="text" class="form-control" id="nom" placeholder="Entrez un nom" name="nom">
@@ -49,7 +46,7 @@
             <input type="file" class="form-control" id="image" placeholder="" name="image">
         </div>
 
-        <button type="submit" class="btn btn-primary">Enregister</button>
+        <button type="submit" class="btn btn-outline-primary">Enregister</button>
 
     </form>
 

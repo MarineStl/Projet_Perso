@@ -1,44 +1,39 @@
 @extends('dashboard')
 
 @section('content')
-<div class="row">
+    <div class="row">
 
-<div class="col-lg-11">
-
-    <h2>Gestion des produits</h2>
-
-</div>
+        <div class="col-lg-11">
+             <h2>Gestion des produits</h2>
+        </div>
 
 
-<div class="col-lg-1">
-    <a class="btn btn-outline-success" href="{{ url('produit/create') }}">Ajouter</a>
-</div>
-</div>
+        <div class="col-lg-1">
+            <a class="btn btn-outline-success" href="{{ url('produit/create') }}">Ajouter</a>
+        </div>
+    </div>
 
 
 
-@if ($message = Session::get('success'))
+    @if ($message = Session::get('success'))
 
-<div class="alert alert-success">
-    <p>{{ $message }}</p>
-</div>
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
 
-@endif
-
-
-
-<table class="table table-bordered">
-
-<tr>
-
-    <th class="px-2 py-2 w-1/4">No</th>
-    <th class="px-2 py-2 w-1/4">Nom</th>
-    <th class="px-2 py-2 w-1/4">Description</th>
-    <th class="px-2 py-2 w-1/4">Prix</th>
-    <th class="px-2 py-2 w-1/4">Image</th>
+    @endif
 
 
-</tr>
+
+    <table class="table table-bordered">
+
+        <tr>
+            <th class="px-2 py-2 w-1/4">No</th>
+            <th class="px-2 py-2 w-1/4">Nom</th>
+            <th class="px-2 py-2 w-1/4">Description</th>
+            <th class="px-2 py-2 w-1/4">Prix</th>
+            <th class="px-2 py-2 w-1/4">Image</th>
+        </tr>
 
 @foreach ($produits as $list => $produit)
 

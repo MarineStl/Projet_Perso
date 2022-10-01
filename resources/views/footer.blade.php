@@ -27,7 +27,7 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-5">
             <h6 class="text-uppercase mb-4 font-weight-bold">En savoir plus</h6>
             <p>
-              <a class="text-white">Nous contacter</a>
+              <a class="text-white" href="{{ url('google-autocomplete') }}">Nous trouver</a>
             </p>
             <p>
               <a class="text-white">Mentions légales</a>

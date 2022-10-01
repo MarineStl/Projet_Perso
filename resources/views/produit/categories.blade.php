@@ -88,7 +88,7 @@
 @foreach ($produits as $list => $produit)
 
     <div class="card">
-        <div class="card  bg-light" style = "width: 27rem;" >
+        <div class="card  bg-light" style = "width: 20rem;">
             <h5 class="card-title text-center">{{ $produit->nom }}</h5>
             <img class="card-img-top"  src="{{ $produit->image }}" alt="" height="350" width="600">
             <div class="card-body">

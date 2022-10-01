@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h1>Ajouter une commande</h1>
+    <h1>Créer une nouvelle commande</h1>
 
 
     @if ($errors->any())
@@ -93,7 +93,6 @@
                     <label for="villebis">Ville:</label>
                     <input type="text" class="form-control" id="villebis" placeholder="Entrez une ville" name="villebis">
                 </div>
-
             <script type="text/javascript">
 
                 function AfficherCacher(texte) 
@@ -110,9 +109,10 @@
                     document.getElementById('click').checked = true;
 
                 }
-            }
+                }
 
             </script>
+
         </div>
                      
         <div class="row">
@@ -151,17 +151,11 @@
             </div>
         </div>
 
-        <br>
-
         <div class="form-group mb-3">
             <label for="paiement">Paiement:</label>
-            <select class="custom-select">
-            <option selected>Choisir un moyen de paiement</option>
-            <option value="1">CB</option>
-            <option value="2">Espèces</option>
-            <option value="3">Chèque</option>
-            </select>
+            <input type="text" class="form-control" id="paiement" placeholder="Entrez un moyen de paiement" name="paiement">
         </div>
+        
         <button type="submit" class="btn btn-outline-info">Enregister</button>
 
     </form>

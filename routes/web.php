@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\ProduitController;
+use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,6 +53,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('google-autocomplete', [GoogleController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

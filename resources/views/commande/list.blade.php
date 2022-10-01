@@ -4,9 +4,7 @@
     <div class="row">
 
         <div class="col-lg-11">
-
             <h2>Gestion des commandes</h2>
-
         </div>
 
         
@@ -33,13 +31,7 @@
 
             <th class="px-2 py-2 w-1/4">No</th>
             <th class="px-2 py-2 w-1/4">Nom</th>
-            <th class="px-2 py-2 w-1/4">Prénom</th>
             <th class="px-2 py-2 w-1/4">Mail</th>
-            <th class="px-2 py-2 w-1/4">Portable</th>
-            <th class="px-2 py-2 w-1/4">Adresse</th>
-            <th class="px-2 py-2 w-1/4">Complément</th>
-            <th class="px-2 py-2 w-1/4">Ville</th>
-            <th class="px-2 py-2 w-1/4">Code</th>
             <th class="px-2 py-2 w-1/4">Produit</th>
             <th class="px-2 py-2 w-1/4">Quantité</th>
             <th class="px-2 py-2 w-1/4">Prix</th>
@@ -53,13 +45,7 @@
             <tr>
                 <td>{{ $list }}</td>
                 <td>{{ $commande->nom }}</td>
-                <td>{{ $commande->prenom }}</td>
                 <td>{{ $commande->mail }}</td>
-                <td>{{ $commande->portable }}</td>
-                <td>{{ $commande->adresse }}</td>
-                <td>{{ $commande->complement }}</td>
-                <td>{{ $commande->ville }}</td>
-                <td>{{ $commande->code }}</td>
                 <td>{{ $commande->produit }}</td>
                 <td>{{ $commande->quantite }}</td>
                 <td>{{ $commande->prix }}</td>

@@ -32,7 +32,6 @@
         </div>
 
         <div class="form-group mb-3">
-
             <label for="prenom">Prénom:</label>
             <input type="text" class="form-control" id="prenom" placeholder="Entrez un prenom" name="prenom" value="{{ $commande->prenom }}">
         </div>
