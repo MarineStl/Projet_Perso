@@ -28,15 +28,29 @@
 
     </head>
         <body>
+ 
         <div class="max-w-20xl mx-auto sm:px-10 lg:px-10">
             <div class="relative flex justify-center pt-8 sm:justify-center sm:pt-0">
                 <img class="Logo" src="img/natural.png" alt="Logo" height="100" width="200">
             </div>
+            
+
             <div class="relative flex items-top justify-center">
                 @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                         @auth
+                        <div style="display:none;">
                             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500">Dashboard</a>
+                            </div>
+                            <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+                        </form>
                         @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500">@lang('Log in')</a>
                         @if (Route::has('register'))
@@ -44,9 +58,11 @@
                         @endif
                         @endauth
                     </div>
-                    @endif
-                    
-                </div>       
+                    @endif  
+                </div> 
+                
+                
+
 
             
                 <div class="text-center">

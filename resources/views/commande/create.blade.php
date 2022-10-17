@@ -56,7 +56,7 @@
         </div>
 
         <!-- checkbox du JS pour afficher/enlever l'adresse de livraison si différente-->
-        <input type="checkbox" id="click" onclick='AfficherCacher("MonTexte1"); return false'> Adresse de livraison différente<br/>
+        <input type="checkbox" id="click" onclick='AfficherCacher("MonTexte1"); return false'> Adresse de facturation<br/>
 
         <!-- div du formulaire adresse différente -->
 

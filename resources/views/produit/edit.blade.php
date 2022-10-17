@@ -28,17 +28,17 @@
 
         <div class="form-group mb-3">
             <label for="nom">Nom :</label>
-            <input type="text" class="form-control" id="nom" placeholder="Entrez un nom" name="nom">
+            <input type="text" class="form-control" id="nom" placeholder="Entrez un nom" name="nom" value="{{ $produit->nom }}">
         </div>
 
         <div class="form-group mb-3">
             <label for="description">Description:</label>
-            <input type="text" class="form-control" id="description" placeholder="Entrez une description" name="description">
+            <input type="text" class="form-control" id="description" placeholder="Entrez une description" name="description" value="{{ $produit->description }}">
         </div>
 
         <div class="form-group mb-3">
             <label for="prix">Prix:</label>
-            <input type="number" class="form-control" id="prix" placeholder="Entrez un prix" name="prix">
+            <input type="number" class="form-control" id="prix" placeholder="Entrez un prix" name="prix" value="{{ $produit->prix }}">
         </div>
 
         <div class="form-group mb-3">

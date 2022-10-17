@@ -64,7 +64,7 @@ class ProduitController extends Controller
 
 
         $produit->save();
-        return redirect('/')->with('success', 'Produit Ajouté avec succès');
+        return redirect('produit/list')->with('success', 'Produit ajouté avec succès');
 
     }
 
@@ -124,7 +124,7 @@ class ProduitController extends Controller
 
         $produit->update();
 
-        return redirect('/')->with('success', 'Produit Modifié avec succès');
+        return redirect('produit/list')->with('success', 'Produit modifié avec succès');
 
     }
 
@@ -140,7 +140,7 @@ class ProduitController extends Controller
         $produit = Produit::findOrFail($id);
         $produit->delete();
 
-        return redirect('/')->with('success', 'Produit Supprimé avec succès');
+        return redirect('produit/list')->with('success', 'Produit supprimé avec succès');
 
     }
 

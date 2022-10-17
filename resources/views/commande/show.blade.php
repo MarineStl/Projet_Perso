@@ -1,102 +1,87 @@
 @extends('layouts.app')
 
 
-@section('content')
+    @section('content')
 
-    <h1>Gestion des commandes</h1>
+        <h1>Gestion des commandes</h1>
 
+    <br>
 
-    <table class="table table-bordered">
+    <div class="d-flex flex-row justify-content-center border dark">
+        <div class="col-4 text-center">
+            <a class=" d-block text-4xl text-uppercase text-white bg-dark">Renseignement Client</a><br/>
+            <a class="text-2xl text-success">Nom</a>
+            <a>{{ $commande->nom }}</a><br/>
+            <a class="text-2xl text-success">Prénom</a>
+            <a>{{ $commande->prenom }}</a><br/>
+            <a class="text-2xl text-success">Mail</a>
+            <a>{{ $commande->mail }}</a><br/>
+            <a class="text-2xl text-success">Portable</a>
+            <a>{{ $commande->portable }}</a><br/>
+            <a class="text-2xl text-success">Adresse</a>
+            <a>{{ $commande->adresse }}</a><br/>
+            <a class="text-2xl text-success">Complément d'adresse</a>
+            <a>{{ $commande->complement }}</a><br/>
+            <a class="text-2xl text-success">Ville</a>
+            <a>{{ $commande->ville }}</a><br/>
+            <a class="text-2xl text-success">Code</a>
+            <a>{{ $commande->code }}</a><br/>
+        </div>
 
-        <tr>
-            <th>Nom:</th>
-            <td>{{ $commande->nom }}</td>
-        </tr>
+        <div class="col-4 text-center">
+            <a class="d-block text-4xl text-uppercase text-white bg-dark">Renseignement Produit</a><br/>
+            <a class="text-2xl text-success">Produits</a>
+            <a>{{ $commande->produit }}</a><br/>
+            <a class="text-2xl text-success">Quantité</a>
+            <a>{{ $commande->quantite }}</a><br/>
+            <a class="text-2xl text-success">Prix</a>
+            <a>{{ $commande->prix }}</a><br/>
+            <a class="text-2xl text-success">TTC</a>
+            <a>{{ $commande->ttc }}</a><br/>
+            <a class="text-2xl text-success">Prix TTC</a>
+            <a>{{ $commande->ttc }}</a><br/>
+            <a class="text-2xl text-success">Paiement</a>
+            <a>{{ $commande->paiement }}</a><br/>
+        </div>
+    </div>
+    </br>
+        <div class="flex text-center col-10  justify-center">
+            <input type="checkbox" id="click" onclick='AfficherCacher("MonTexte1"); return false'>Adresse de facturation<br/>
 
-        <tr>
+            <div id="MonTexte1" style="display:none">
+                <a class="text-2xl text-success">Nom</a>
+                <a>{{ $commande->nombis }}</a><br/>
+                <a class="text-2xl text-success">Prénom</a>
+                <a>{{ $commande->prenombis }}</a><br/>
+                <a class="text-2xl text-success">Adresse de livraison</a>
+                <a>{{ $commande->adressebis }}</a><br/>
+                <a class="text-2xl text-success">Complément d'adresse</a>
+                <a>{{ $commande->complementbis }}</a><br/>
+                <a class="text-2xl text-success">Code Postal</a>
+                <a>{{ $commande->codebis }}</a><br/>
+                <a class="text-2xl text-success">Ville</a>
+                <a>{{ $commande->villebis }}</a><br/>
+            </div>
+        </div>
+            
+        <script type="text/javascript">
 
-            <th>Prénom:</th>
-            <td>{{ $commande->prenom }}</td>
-
-        </tr>
-
-        <tr>
-
-            <th>Mail:</th>
-            <td>{{ $commande->mail }}</td>
-
-        </tr>
-
-        <tr>
-
-            <th>Portable:</th>
-            <td>{{ $commande->portable }}</td>
-
-        </tr>
-
-        <tr>
-
-        <th>Adresse:</th>
-        <td>{{ $commande->adresse }}</td>
-
-        </tr>
-
-        <tr>
-
-        <th>Complément:</th>
-        <td>{{ $commande->complement }}</td>
-
-        </tr>
-
-        <tr>
-
-        <tr>
-    
-        <th>Code postal:</th>
-        <td>{{ $commande->code }}</td>
-    
-        </tr>
-
-        <th>Ville:</th>
-        <td>{{ $commande->ville }}</td>
-
-        </tr>
-
-        <tr>
-
-        <th>Produit:</th>
-        <td>{{ $commande->produit }}</td>
-
-        </tr>
-
-        <tr>
-
-        <th>Quantité:</th>
-        <td>{{ $commande->quantite }}</td>
-
-        </tr>
-
-        <tr>
-
-        <th>Prix:</th>
-        <td>{{ $commande->Prix }}</td>
-
-        </tr>
-
-        <tr>
-
-        <th>TTC:</th>
-        <td>{{ $commande->ttc }}</td>
-
-        </tr>
-
-        <tr>
-
-        <th>Paiement:</th>
-        <td>{{ $commande->paiement }}</td>
-
-        </tr>
-
-    </table>
-
+            function AfficherCacher(texte)
+            {
+                var test = document.getElementById(texte).style.display;
+                if (test == "block")
+                {
+                    document.getElementById(texte).style.display = "none";
+                    
+                }
+                else 
+                {
+                    document.getElementById(texte).style.display = "block";
+                    document.getElementById('click').checked = true;
+                    
+                }
+            }
+        </script>
+    </div>
+</div>
 @endsection

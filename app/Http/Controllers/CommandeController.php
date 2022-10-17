@@ -51,12 +51,12 @@ class CommandeController extends Controller
             'prix' => 'required',
             'ttc' => 'required',
             'paiement' => 'required',
-            'nombis' => 'required',
-            'prenombis' => 'required',
-            'adressebis' => 'required',
-            'complementbis' => 'required',
-            'codebis' => 'required',
-            'villebis' => 'required'
+            'nombis' => '',
+            'prenombis' => '',
+            'adressebis' => '',
+            'complementbis' => '',
+            'codebis' => '',
+            'villebis' => ''
             
 
         ]);
@@ -87,7 +87,7 @@ class CommandeController extends Controller
 
 
         $commande->save();
-        return redirect('/')->with('success', 'Commande Ajoutée avec succès');
+        return redirect('commande/list')->with('success', 'Commande ajoutée avec succès');
 
     }
 
@@ -139,7 +139,13 @@ class CommandeController extends Controller
             'quantite' => 'required',
             'prix' => 'required',
             'ttc' => 'required',
-            'paiement' => 'required'
+            'paiement' => 'required',
+            'nombis' => '',
+            'prenombis' => '',
+            'adressebis' => '',
+            'complementbis' => '',
+            'codebis' => '',
+            'villebis' => ''
         ]);
 
 
@@ -159,11 +165,17 @@ class CommandeController extends Controller
         $commande->prix = $request->get('prix');
         $commande->ttc = $request->get('ttc');
         $commande->paiement = $request->get('paiement');
+        $commande->nombis = $request->get('nombis');
+        $commande->prenombis = $request->get('prenombis');
+        $commande->adressebis = $request->get('adressebis');
+        $commande->complementbis = $request->get('complementbis');
+        $commande->codebis = $request->get('codebis');
+        $commande->villebis = $request->get('villebis');
 
 
         $commande->update();
 
-        return redirect('/')->with('success', 'Commande Modifiée avec succès');
+        return redirect('commande/list')->with('success', 'Commande modifiée avec succès');
 
     }
 
@@ -179,7 +191,7 @@ class CommandeController extends Controller
         $commande = Commande::findOrFail($id);
         $commande->delete();
 
-        return redirect('/')->with('success', 'Commande Supprimée avec succès');
+        return redirect('commande/list')->with('success', 'Commande supprimée avec succès');
 
     }
 

@@ -51,7 +51,7 @@
                 @csrf
                 @method('DELETE')
                 <div class="d-grid gap-2">
-                     <a class="btn btn-outline-warning" href="{{ url('produit/'. $produit->id) }}">Voir</a>
+                     <a class="btn btn-outline-dark" href="{{ url('produit/'. $produit->id) }}">Voir</a>
                      <a class="btn btn-outline-info" href="{{ url('produit/'. $produit->id .'/edit') }}">Modifier</a>
 
                     <button type="submit" class="btn btn-outline-danger">Supprimer</button>

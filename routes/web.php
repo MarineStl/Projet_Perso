@@ -3,6 +3,7 @@
 use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,8 +56,35 @@ Route::get('/', function () {
 
 Route::get('google-autocomplete', [GoogleController::class, 'index']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+
+  
+  
+/*------------------------------------------
+--------------------------------------------
+All Normal Users Routes List
+--------------------------------------------
+--------------------------------------------*/
+Route::middleware(['auth', 'user-access:user'])->group(function () {
+  
+    Route::get('welcome', [HomeController::class, 'index'])->name('welcome');
+    
+});
+
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+  
+    Route::get('welcome', [HomeController::class, 'index'])->name('welcome');
+    });
+    
+  
+/*------------------------------------------
+--------------------------------------------
+All Admin Routes List
+--------------------------------------------
+--------------------------------------------*/
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+  
+    Route::get('dashboard', [HomeController::class, 'adminHome'])->name('dashboard');
+    });
+    
 
 require __DIR__.'/auth.php';
